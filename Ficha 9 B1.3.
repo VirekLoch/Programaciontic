@@ -1,0 +1,82 @@
+#include<stdio.h>
+ char no , se, youngname;
+ int  x,Z,people,medsolt,solt,edmedsolt,porcsep,separados,pro,eciv,eda,val,viu,vih,vim,sep,young,pos,ph,pm;
+ char nomb[100];
+ int ec [100];
+ int ed [100];
+ char sx [100];
+int main (void)
+{
+    x=1;
+    val=1;
+ 
+    while(pro!=1) //solt caas viud
+    {
+        printf("\n Nombre: \t");
+        scanf("%s",&nomb[val]);
+        printf("\n Estado civil: \t");
+        scanf("%d",&ec[val]);
+        printf("\n Edad: \t");
+        scanf("%d",&ed[val]);
+        printf("\n Sexo: \t");
+        scanf("%s",&sx[val]);
+        nomb[val]=no;
+        x++;
+        printf("\n Para cancelar pulsa 1 \t");
+        scanf("%d",&pro);
+        val++;
+       }
+    people=x-1;
+    x=1;
+    val=1;
+       for(x=1;x<=people;val++)
+        {
+          if(ec[val]==1)      
+          {
+             solt++;
+             medsolt=eda+medsolt;
+          }
+          else if(ec[val]==3)
+          {
+          	sep++;
+		  }
+		  else if(ec[val]==4)
+		  {
+		  	viu++;
+		  	if(sx[val]=='h')
+		  	{
+              vih++;
+            }
+            else{vim++;}
+		    if(ed[val]<young)
+		    {
+               young=ed[val];
+               youngname=nomb[val];           
+            }
+          }
+		  x++;
+        }
+        printf("\nQue quieres saber?\t");
+        scanf("%d\n",&Z);
+        switch(Z)
+        {
+        	case 1:edmedsolt=(medsolt/solt);
+                   printf("La media de edad de las personas solteras es %d\n", edmedsolt);
+                   
+        	case 2:pos=((sep/people)/100);
+                   printf("el porcentaje de personas solteras es %d %%\n", pos);
+                   
+        	case 3:ph=((vih/viu)/100);
+        	       pm=((vim/viu)/100);
+        	       printf("el porcentaje de viudos hombre es %d %%\n", ph);
+        	       printf("el porcentaje de mujeres viudas es %d %%\n", pm);
+        	       printf("el mas joven se llama %s y tiene %d años",youngname,young);
+                 
+        	default:printf("Error");
+                    
+		}
+    
+
+      
+return 0;
+}
