@@ -9,7 +9,6 @@ int main (void)
 {
     x=1;
     val=1;
- 
     while(pro!=1) //solt caas viud
     {
         printf("\n Nombre: \t");
@@ -57,26 +56,23 @@ int main (void)
 		  x++;
         }
         printf("\nQue quieres saber?\t");
-        scanf("%d\n",&Z);
+        scanf("%d",&Z);
         switch(Z)
         {
         	case 1:edmedsolt=(medsolt/solt);
-                   printf("La media de edad de las personas solteras es %d\n", edmedsolt);
+                   printf("\n La media de edad de las personas solteras es %d\n", edmedsolt);
                    
         	case 2:pos=((sep/people)/100);
-                   printf("el porcentaje de personas solteras es %d %%\n", pos);
+                   printf("\n el porcentaje de personas solteras es %d %%\n", pos);
                    
         	case 3:ph=((vih/viu)/100);
         	       pm=((vim/viu)/100);
-        	       printf("el porcentaje de viudos hombre es %d %%\n", ph);
-        	       printf("el porcentaje de mujeres viudas es %d %%\n", pm);
-        	       printf("el mas joven se llama %s y tiene %d años",youngname,young);
+        	       printf("\n el porcentaje de viudos hombre es %d %%\n", ph);
+        	       printf("\n el porcentaje de mujeres viudas es %d %%\n", pm);
+        	       printf("\n el mas joven se llama %s y tiene %d años",youngname,young);
                  
         	default:printf("Error");
                     
 		}
-    
-
-      
-return 0;
+		return 0;
 }
