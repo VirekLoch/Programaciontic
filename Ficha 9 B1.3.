@@ -1,3 +1,4 @@
+
 #include<stdio.h>
  char no , se, youngname;
  int  x,Z,people,medsolt,solt,edmedsolt,porcsep,separados,pro,eciv,eda,val,viu,vih,vim,sep,young,pos,ph,pm;
@@ -9,7 +10,7 @@ int main (void)
 {
     x=1;
     val=1;
-    while(pro!=1) //solt caas viud
+    while(pro!=1) 
     {
         printf("\n Nombre: \t");
         scanf("%s",&nomb[val]);
@@ -54,24 +55,29 @@ int main (void)
             }
           }
 		  x++;
-        }
+}
+        edmedsolt=(medsolt/solt);
+        pos=((sep/people)/100);
+        
         printf("\nQue quieres saber?\t");
         scanf("%d",&Z);
         switch(Z)
         {
-        	case 1:edmedsolt=(medsolt/solt);
-                   printf("\n La media de edad de las personas solteras es %d\n", edmedsolt);
+        	case 1:printf("\n La media de edad de las personas solteras es %d\n", edmedsolt);
+                   break;
                    
-        	case 2:pos=((sep/people)/100);
-                   printf("\n el porcentaje de personas solteras es %d %%\n", pos);
+        	case 2: printf("\n el porcentaje de personas solteras es %d %%\n", pos);
+                      break;
                    
         	case 3:ph=((vih/viu)/100);
         	       pm=((vim/viu)/100);
         	       printf("\n el porcentaje de viudos hombre es %d %%\n", ph);
         	       printf("\n el porcentaje de mujeres viudas es %d %%\n", pm);
         	       printf("\n el mas joven se llama %s y tiene %d años",youngname,young);
+        	          break;
                  
         	default:printf("Error");
+        	   break;
                     
 		}
 		return 0;
